@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Reservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b2b2c4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #6b4343;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #7dddf8;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #3fdb60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Movie Ticket Reservation</h2>
+        <form>
+            <!-- Name -->
+            <label for="name">Full Name:</label>
+            <input type="text"  name="name" placeholder="Enter your full name" required>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email"  name="email" placeholder="Enter your email" required>
+
+            <!-- Phone -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <!-- Movie Selection -->
+            <label for="movie">Select Movie:</label>
+            <select id="movie" name="movie" required>
+                <option value="" disabled selected>Choose a movie</option>
+                <option value="movie1">Avatar: The Way of Water</option>
+                <option value="movie2">Oppenheimer</option>
+                <option value="movie3">Spider-Man: No Way Home</option>
+                <option value="movie4">The Batman</option>
+            </select>
+
+            <!-- Date -->
+            <label for="date">Show Date:</label>
+            <input type="date" name="date" required>
+
+            <!-- Time -->
+            <label for="time">Show Time:</label>
+            <select id="time" name="time" required>
+                <option value="" disabled selected>Choose a time</option>
+                <option value="morning">10:00 AM</option>
+                <option value="afternoon">2:00 PM</option>
+                <option value="evening">6:00 PM</option>
+                <option value="night">9:00 PM</option>
+            </select>
+
+            <!-- Number of Tickets -->
+            <label for="tickets">Number of Tickets:</label>
+            <input type="number"  name="tickets" min="1" max="10" placeholder="Enter number of tickets" required>
+
+            <!-- Seat Preference -->
+            <label for="seats">Seat Preference:</label>
+            <textarea id="seats" name="seats" placeholder="E.g., Front Row, Middle Section, etc." rows="3"></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Reserve Tickets</button>
+        </form>
+    </div>
+</body>
+</html>
